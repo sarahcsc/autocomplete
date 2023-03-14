@@ -1,0 +1,15 @@
+.suggestions {
+    width: 100%;
+    max-width: 300px;
+   
+}
+.item {
+    padding: 10px;
+    background-color: #038C7F;
+    border-bottom: 2px solid #01403A;
+    color: white;
+}
+.item:hover {
+    background-color: #027368;
+    cursor: pointer;
+}

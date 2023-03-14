@@ -19,7 +19,6 @@ const getHighlightedItem = (text: string, highlight: string) => {
 
 export default function Suggestions({list, search, selectItem, selectedItem}: SuggestionsProps) {
 
-    console.log(selectedItem);
     // JSX.Element with only elements of the list
     const suggestions = () => {
         return list.map((item, index) => (

@@ -1,8 +1,15 @@
 ### 1. What is the difference between Component and PureComponent? Give an example where it might break my app.
-
 ### 2. Context + ShouldComponentUpdate might be dangerous. Can think of why is that?
 ### 3. Describe 3 ways to pass information from a component to its PARENT.
+1) Not remembering right now a way to pass information to the parent,\
+we can pass functions (or any information) from the parent to child component\
+and the child component will make the use of these functions,
+but the logic is done on the parent, and the update of the state needs to be on the parent too.
+One example on the project is on Suggestions.tsx, where the component receive\
+a function called selectItem from the parent (Suggestions) and then you call
+the function with a data from Suggestions.tsx (item).
 ### 4. Give 2 ways to prevent components from re-rendering.
+1) We can use shouldComponentUpdate, which can tell React not to re-rendering a component, even if the state or prop changes.
 ### 5. What is a fragment and why do we need it? Give an example where it might break my app.
 ### 6. Give 3 examples of the HOC pattern.
 ### 7. What's the difference in handling exceptions in promises, callbacks and async...await.

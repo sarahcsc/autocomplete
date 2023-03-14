@@ -4,6 +4,7 @@ interface SuggestionsProps {
     list: Array<string>,
     search: string,
     selectItem: any,
+    selectedItem: number
 }
 
 // Function to highlight the matching part of the text
@@ -16,12 +17,13 @@ const getHighlightedItem = (text: string, highlight: string) => {
     } </span>;
 }
 
-export default function Suggestions({list, search, selectItem}: SuggestionsProps) {
+export default function Suggestions({list, search, selectItem, selectedItem}: SuggestionsProps) {
 
+    console.log(selectedItem);
     // JSX.Element with only elements of the list
     const suggestions = () => {
         return list.map((item, index) => (
-            <div className="item" onClick={() => selectItem(item)} key={index}>
+            <div onClick={() => selectItem(item)} key={index} className={index === selectedItem ? 'selected item' : 'item'}>
                 {getHighlightedItem(item, search)}
             </div>
         ))
